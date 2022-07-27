@@ -55,13 +55,13 @@ module.exports = (env, argv)=> {
       }
     },
     plugins: plugins(),
+    devtool: isDev ? 'source-map': false,
     devServer: {
       port: 5500,
       open: true,
-      hot: true,
+      hot: isDev,
       watchFiles: './',
     },
-    devtool: isDev ? 'source-map': false,
     module: {
       rules: [
         {
