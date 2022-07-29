@@ -50,8 +50,8 @@ module.exports = (env, argv)=> {
     resolve: {
       extensions: ['.js'],
       alias: {
-        '@': './src',
-        '@core': './src/core'
+        '@': path.resolve(__dirname, 'src'),
+        '@core': path.resolve(__dirname, 'src/core')
       }
     },
     plugins: plugins(),
